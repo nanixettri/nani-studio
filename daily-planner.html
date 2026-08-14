@@ -1,1 +1,325 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Daily Planner | Nani Studio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f7f1e8;
+      color: #3b2418;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #fffaf3;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #dfd0bf;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #3b2418;
+      text-decoration: none;
+      margin-left: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .back {
+      display: inline-block;
+      margin: 30px 7%;
+      color: #70452f;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .product-page {
+      max-width: 1100px;
+      margin: 20px auto 80px;
+      padding: 0 6%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .preview {
+      background: #ead8c5;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 45px;
+    }
+
+    .paper {
+      width: 75%;
+      min-height: 420px;
+      background: #fffaf3;
+      padding: 35px 25px;
+      box-shadow: 0 15px 35px rgba(60, 35, 20, 0.15);
+    }
+
+    .paper h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .line {
+      height: 1px;
+      background: #d9c4af;
+      margin: 14px 0;
+    }
+
+    .fake-line {
+      height: 9px;
+      background: #ead8c5;
+      margin: 13px 0;
+      border-radius: 5px;
+    }
+
+    .info small {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8a5a3b;
+    }
+
+    .info h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin: 12px 0 18px;
+    }
+
+    .description {
+      font-family: Arial, sans-serif;
+      color: #604636;
+      margin-bottom: 25px;
+    }
+
+    .price {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      background: #4b2c1e;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      padding: 16px;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .button:hover {
+      background: #70452f;
+    }
+
+    .note {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #806859;
+      text-align: center;
+    }
+
+    .details {
+      max-width: 900px;
+      margin: 0 auto 80px;
+      padding: 0 7%;
+      text-align: center;
+    }
+
+    .details h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .details p {
+      font-family: Arial, sans-serif;
+      color: #604636;
+      margin-bottom: 25px;
+    }
+
+    .details ul {
+      list-style: none;
+      font-family: Arial, sans-serif;
+      color: #604636;
+    }
+
+    .details li {
+      margin: 10px;
+    }
+
+    footer {
+      background: #3b2418;
+      color: #fff8ee;
+      padding: 40px;
+      text-align: center;
+    }
+
+    footer p {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      margin-top: 8px;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 750px) {
+      header {
+        padding: 15px 5%;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 12px;
+      }
+
+      .product-page {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 10px;
+      }
+
+      .preview {
+        min-height: 400px;
+        padding: 30px;
+      }
+
+      .paper {
+        min-height: 330px;
+        width: 80%;
+        padding: 25px 18px;
+      }
+
+      .info h1 {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Nani Studio ♡</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#shop">Shop</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </header>
+
+  <a class="back" href="index.html#shop">
+    ← Back to Shop
+  </a>
+
+  <main class="product-page">
+
+    <section class="preview">
+
+      <div class="paper">
+        <h2>Daily Planner</h2>
+
+        <div class="line"></div>
+
+        <p>Today's Focus</p>
+        <div class="fake-line"></div>
+        <div class="fake-line"></div>
+
+        <p>To Do</p>
+        <div class="fake-line"></div>
+        <div class="fake-line"></div>
+        <div class="fake-line"></div>
+
+        <p>Notes</p>
+        <div class="fake-line"></div>
+        <div class="fake-line"></div>
+      </div>
+
+    </section>
+
+    <section class="info">
+
+      <small>Nani Studio · Digital Planner</small>
+
+      <h1>Daily Planner</h1>
+
+      <p class="description">
+        A simple and beautiful digital planner designed to
+        help you organize your day, focus on what matters,
+        and keep your everyday life a little less chaotic.
+      </p>
+
+      <div class="price">
+        Rs. 249
+      </div>
+
+      <a href="#" class="button">
+        BUY NOW ♡
+      </a>
+
+      <p class="note">
+        Digital product · No physical item will be shipped.
+      </p>
+
+    </section>
+
+  </main>
+
+  <section class="details">
+
+    <h2>What's Included?</h2>
+
+    <p>
+      Everything you need for a more organized and productive day.
+    </p>
+
+    <ul>
+      <li>♡ Daily planning section</li>
+      <li>♡ To-do list</li>
+      <li>♡ Priority & focus section</li>
+      <li>♡ Notes section</li>
+      <li>♡ Instant digital access after purchase</li>
+    </ul>
+
+  </section>
+
+  <footer>
+    <h2>Nani Studio ♡</h2>
+    <p>Digital tools for your best days.</p>
+    <p>© 2026 Nani Studio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
